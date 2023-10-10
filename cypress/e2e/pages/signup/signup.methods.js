@@ -1,21 +1,26 @@
+import { CommonPageMethods } from "../common-page/common-page.data.methods";
 import { SignupElements } from "./signup.elements";
 
-export class SignupMethods{
-    static insertUsername(username){
-        SignupElements.textboxes.username.invoke('val', username)
+export class SignupMethods {
+    static insertUsername(username) {
+        SignupElements.textboxes.username.invoke("val", username)
     }
 
-    static insertPassword(password){
-        SignupElements.textboxes.password.invoke('val', password)
+    static insertPassword(password) {
+        SignupElements.textboxes.password.invoke("val", password)
     }
 
-    static clickOnSignupButton(){
-        SignupElements.buttons.signup.click()
+    static clickOnSignupButton() {
+        SignupElements.buttons.signup.click();
     }
 
-    static signup(username,password){
+    static signup(username, password) {
         this.insertUsername(username);
         this.insertPassword(password);
-        this/this.clickOnSignupButton();
+        this.clickOnSignupButton();
+    }
+
+    static verifySignupSuccesfullMessageIsDisplayed(){
+        CommonPageMethods.verifyAlert("Sign up successful.")
     }
 }

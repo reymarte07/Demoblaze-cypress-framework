@@ -1,8 +1,10 @@
-import { CommonData } from "./commom-page.data";
-import { CommonPageElements } from "./commom-page.data.elements";
 
-export class CommomPageMethods{
+import { CommonData } from "./commoN-page.data";
+import { CommonPageElements } from "./common-page.data.elements";
+
+export class CommonPageMethods{
     static navigateToDemoBlaze(){
+        cy.clearCookies();
         cy.visit(CommonData.url);
     }
 
@@ -28,6 +30,12 @@ export class CommomPageMethods{
 
     static clickOnSignUpOption(){
         CommonPageElements.topMenu.SignUp.click();
+    }
+
+    static verifyAlert(expectedMessage){
+        cy.on('window:alert', (str) => {
+            expect(str).to.equal(expectedMessage);
+          })
     }
 
 }
