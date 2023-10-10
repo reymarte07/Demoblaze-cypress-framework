@@ -1,4 +1,5 @@
 export class CartElements {
+    //-------------PLACE ORDER BUTTON------------------------
     static get buttons(){
         return{
             get placeOrder(){
@@ -7,6 +8,7 @@ export class CartElements {
         };
     }
 
+    //---------------DELETE ITEM IN CART-----------------
     //td[text()="Nexus 6"]/ancestor::tr//a
     static get links(){
         return{

@@ -1,4 +1,5 @@
 export class PlaceOrderData{
+    //--------TEST DATA------------
     static get testData(){
         return{
             name: 'Test name',

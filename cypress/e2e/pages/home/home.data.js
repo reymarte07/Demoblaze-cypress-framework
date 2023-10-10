@@ -1,4 +1,5 @@
 export class homeData{
+    //--------------PRODUCTS ITEMS------------------
     static get phone(){
         return{
             samsungGalaxyS6: 'Samsung galaxy s6',

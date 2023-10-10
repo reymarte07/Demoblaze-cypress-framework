@@ -2,11 +2,15 @@ import { Logger } from "../../util/logger";
 import { CommonData } from "../common-page/commoN-page.data";
 import { CommonPageMethods } from "../common-page/common-page.data.methods";
 import { SignupMethods } from "../signup/signup.methods";
+const user = CommonPageMethods.generateRandomString(10);
+const password = CommonPageMethods.generateRandomString(7);
 
-
-
+//----------------TEST SUITE-----------------------------
 describe(CommonData.testSuites.registroYAutenticacion, () => {
+  //------------------TEST CASE----------------
   it("Registro de usuario válido", () => {
+
+    //--------------STEPS TO REPRODUCE------------------
     Logger.stepNumber(1)
     Logger.step('Navegar a la página de inicio')
     CommonPageMethods.navigateToDemoBlaze();
@@ -17,8 +21,9 @@ describe(CommonData.testSuites.registroYAutenticacion, () => {
 
     Logger.stepNumber(3)
     Logger.step('Completar todos los campos obligatorios con información válida.')
-    SignupMethods.insertUsername('lolosada')
-    SignupMethods.insertPassword('lolosada')
+    //--------------INSERT LOGIN--------------
+    SignupMethods.insertUsername(user)
+    SignupMethods.insertPassword(password)
 
     Logger.stepNumber(4)
     Logger.step('Hacer clic en "Sign up" para registrar el usuario')
