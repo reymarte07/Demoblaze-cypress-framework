@@ -24,8 +24,13 @@ export class CommonPageElements{
             //----------CART BUTTON---------------
             get SignUp(){
                 return cy.contains ('a', 'Sign up')
-            }
+            },
 
         };
+    }
+
+
+    static get singedUser(){
+        return cy.get('a#nameofuser')
     }
 }

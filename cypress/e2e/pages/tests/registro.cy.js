@@ -1,10 +1,11 @@
 import { Logger } from "../../util/logger";
 import { CommonData } from "../common-page/commoN-page.data";
 import { CommonPageMethods } from "../common-page/common-page.data.methods";
+import { LoginData } from "../login/login.data";
 import { SignupMethods } from "../signup/signup.methods";
 const user = CommonPageMethods.generateRandomString(10);
 const password = CommonPageMethods.generateRandomString(7);
-const existingUser= 'random01'
+const existingUser= LoginData.validCredentials.username
 
 //----------------TEST SUITE-----------------------------
 describe(CommonData.testSuites.registro, () => {
@@ -57,7 +58,7 @@ describe(CommonData.testSuites.registro, () => {
     SignupMethods.verifyThatisUserAlreadyExistMessageIsDesplayed();
   });
 
-
+  
 
 });
 
