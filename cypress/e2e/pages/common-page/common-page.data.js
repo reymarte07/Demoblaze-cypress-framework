@@ -7,7 +7,8 @@ export class CommonData{
     //--------------- TESTS SUITES FOR TEST CASES--------------
     static get testSuites(){
         return{
-            registroYAutenticacion: "Registro y Autentificacion",
+            registro: "Registro",
+            autenticacion: "Autenticacion",
             catalogoYCompra: "Catálogo y Compras"
         };
     }
