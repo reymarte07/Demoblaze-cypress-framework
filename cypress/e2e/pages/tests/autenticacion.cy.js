@@ -23,7 +23,6 @@ describe (CommonData.testSuites.autenticacion, ()=>{
         Logger.step('Hacer clic en "Log in" para iniciar sesión.');
         LoginMethods.clickOnLoginButton();
         Logger.verification('Verificar que se redirige al usuario a la página de inicio.');
-        cy.wait(5000)
         CommonPageMethods.verifySignedUser(LoginData.validCredentials.username);
         
 
