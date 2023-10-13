@@ -1,5 +1,5 @@
 export class LoginData {
-    //------------INVALID CREDENTIALS----------
+    //------------VALID CREDENTIALS----------
     static get validCredentials(){
         return{
             username: "random01",
