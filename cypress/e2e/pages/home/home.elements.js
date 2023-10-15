@@ -3,21 +3,21 @@ export class HomeElements{
         return{
             //-----------PHONE SELECTOR----------
             get phones(){
-                return cy.contains('a', 'Phones')
+                return cy.contains("a", "Phones")
             }, 
             //----------LAPTO SELECTOR----------
             get laptops(){
-                 cy.contains('a', 'Laptops')
+                 return cy.contains("a", "Laptops")
             },
             //-----------MONITOR SELECTOR-----------
             get monitors(){
-                 cy.contains('a', 'Monitors')
+                 return cy.contains('a', 'Monitors')
             },
         };
     }
 
     //----------PRODUCT NAME SELECTOR-------------
     static product(productName){
-        return cy.contains('a', productName)
+        return cy.contains("a", productName);
     }
 }

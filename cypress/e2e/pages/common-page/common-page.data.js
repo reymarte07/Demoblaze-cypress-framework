@@ -1,7 +1,7 @@
 export class CommonData{
     //------------- HOME URL------------------
     static get url(){
-        return "https://www.demoblaze.com/cart.html";
+        return "https://www.demoblaze.com/index.html";
     }
 
     //--------------- TESTS SUITES FOR TEST CASES--------------
@@ -9,7 +9,8 @@ export class CommonData{
         return{
             registro: "Registro",
             autenticacion: "Autenticacion",
-            catalogoYCompra: "Catálogo y Compras"
+            catalogoYCompras: "Catálogo y Compras",
+
         };
     }
 }
