@@ -21,7 +21,7 @@ export class homeMethods{
         HomeElements.product(productName).click();
     }
 
-    //
+    //--------VERIFY A PRODUCT IS SHOWN----------------
     static verifyProductDisplayed(productName){
         HomeElements.product(productName).should('be.visible')
     }

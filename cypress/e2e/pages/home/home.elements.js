@@ -18,6 +18,6 @@ export class HomeElements{
 
     //----------PRODUCT NAME SELECTOR-------------
     static product(productName){
-        return cy.contains("a", productName);
+        return cy.contains("a", productName, {timeout: 50000});
     }
 }
