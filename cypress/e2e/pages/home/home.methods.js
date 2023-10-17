@@ -25,5 +25,10 @@ export class homeMethods{
     static verifyProductDisplayed(productName){
         HomeElements.product(productName).should('be.visible')
     }
+
+     //----------VERIDY HOME BUTTON IS SHOWN ON PAGE--------
+     static verifyHomePageIsShown(){
+        cy.url().should('include', 'index.html')
+    }
 }
 

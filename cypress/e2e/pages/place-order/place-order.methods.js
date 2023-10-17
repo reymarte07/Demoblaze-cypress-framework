@@ -24,12 +24,12 @@ export class PlaceOrderMethods{
     }
 
     //-------INSERT MONTH----------
-    static month(month){
+    static insertMonth(month){
         PlaceOrderElements.textboxes.month.invoke('val', month)
     }
 
     //-------INSERT YEAR---------    
-    static year (year){
+    static insertYear (year){
         PlaceOrderElements.textboxes.year.invoke('val', year)
     }
 
@@ -41,6 +41,15 @@ export class PlaceOrderMethods{
     //----------CLICK ON PURCHASE BUTTON----------
     static clickOnPurchaseButton(){
         PlaceOrderElements.buttons.purchase.click();
+    }
+
+    static insertOrderInformation(data){
+        this.insertName(data.name)
+        this.insertCountry(data.country)
+        this.insertCity(data.city)
+        this.insertCreditCard(data.creditCardNumber)
+        this.insertMonth(data.month)
+        this.insertYear(data.year)
     }
 
 }

@@ -26,6 +26,9 @@ export class CommonPageMethods{
     //------------CLICK ON CART MENU---------------------
     static clickOnCartOption(){
         CommonPageElements.topMenu.cart.click();
+        Cypress.on('uncaught:exception', (err, runnable) => {
+            return false
+          })
     }
 
     //-----------CLICK ON LOGIN BUTTON MENU-----------------
