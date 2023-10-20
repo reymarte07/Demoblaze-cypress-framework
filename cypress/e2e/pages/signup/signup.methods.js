@@ -1,4 +1,4 @@
-import { CommonPageMethods } from "../common-page/common-page.data.methods";
+import { CommonPageMethods } from "../common-page/common-page.methods";
 import { SignupElements } from "./signup.elements";
 
     //----------SING UP METHOD----------

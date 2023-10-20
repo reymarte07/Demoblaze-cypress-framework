@@ -1,7 +1,7 @@
 import { Logger } from "../../util/logger";
 import { CartMethods } from "../cart/cart.methods";
 import { CommonData } from "../common-page/commoN-page.data";
-import { CommonPageMethods } from "../common-page/common-page.data.methods";
+import { CommonPageMethods } from "../common-page/common-page.methods";
 import { homeMethods } from "../home/home.methods";
 import { LoginData } from "../login/login.data";
 import { LoginMethods } from "../login/login.methods";
@@ -142,6 +142,6 @@ describe (CommonData.testSuites.catalogoYCompras, ()=>{
         
     })
 
-    
+
 
 })

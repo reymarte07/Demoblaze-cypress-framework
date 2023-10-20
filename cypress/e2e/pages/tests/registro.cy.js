@@ -1,6 +1,6 @@
 import { Logger } from "../../util/logger";
 import { CommonData } from "../common-page/commoN-page.data";
-import { CommonPageMethods } from "../common-page/common-page.data.methods";
+import { CommonPageMethods } from "../common-page/common-page.methods";
 import { LoginData } from "../login/login.data";
 import { SignupMethods } from "../signup/signup.methods";
 const user = CommonPageMethods.generateRandomString(10);
@@ -60,7 +60,7 @@ describe(CommonData.testSuites.registro, () => {
 
 
 
-  
+
 
 });
 
