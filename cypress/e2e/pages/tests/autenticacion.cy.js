@@ -53,4 +53,8 @@ describe (CommonData.testSuites.autenticacion, ()=>{
             Logger.verification('Verificar que se muestra un mensaje de error indicando que el inicio de sesión ha fallado.');
             LoginMethods.verifyWrongPasswordMessage();
         })
+
+
+
+        
 })

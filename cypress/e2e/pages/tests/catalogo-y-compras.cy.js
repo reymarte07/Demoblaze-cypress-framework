@@ -140,10 +140,8 @@ describe (CommonData.testSuites.catalogoYCompras, ()=>{
         thankYouForYouPurchaseMethods.clickOnOKButton();
         homeMethods.verifyHomePageIsShown();
         
-
-
-
-
     })
+
+    
 
 })
