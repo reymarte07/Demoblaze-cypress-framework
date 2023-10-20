@@ -58,8 +58,6 @@ describe(CommonData.testSuites.registro, () => {
     SignupMethods.verifyThatisUserAlreadyExistMessageIsDesplayed();
   });
 
-  
-
 });
 
 

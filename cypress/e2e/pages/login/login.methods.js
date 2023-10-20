@@ -1,5 +1,5 @@
 import { Logger } from "../../util/logger";
-import { CommonPageMethods } from "../common-page/common-page.data.methods";
+import { CommonPageMethods } from "../common-page/common-page.methods";
 import { LoginElements } from "./login.elements";
 
 //----------LOGIN METHODS-------------

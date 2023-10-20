@@ -1,6 +1,6 @@
 import { Logger } from "../../util/logger";
 import { CommonData } from "../common-page/commoN-page.data";
-import { CommonPageMethods } from "../common-page/common-page.data.methods";
+import { CommonPageMethods } from "../common-page/common-page.methods";
 import { LoginData } from "../login/login.data";
 import { LoginMethods } from "../login/login.methods";
 
@@ -24,8 +24,10 @@ describe (CommonData.testSuites.autenticacion, ()=>{
         LoginMethods.clickOnLoginButton();
         Logger.verification('Verificar que se redirige al usuario a la página de inicio.');
         CommonPageMethods.verifySignedUser(LoginData.validCredentials.username);
-        
 
+        Logger.postCondition('Log out')
+        CommonPageMethods.logout();
+        
     })
 
 })
@@ -50,8 +52,5 @@ describe (CommonData.testSuites.autenticacion, ()=>{
             LoginMethods.clickOnLoginButton();
             Logger.verification('Verificar que se muestra un mensaje de error indicando que el inicio de sesión ha fallado.');
             LoginMethods.verifyWrongPasswordMessage();
-            
-    
         })
-
 })

@@ -25,10 +25,13 @@ export class CommonPageElements{
             get SignUp(){
                 return cy.contains ('a', 'Sign up')
             },
+            //---------LOG OUT BUTTON------------
+            get logout(){
+                return cy.get("#logout2")
+            }
 
         };
     }
-
 
     static get singedUser(){
         return cy.get('a#nameofuser')

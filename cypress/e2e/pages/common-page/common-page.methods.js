@@ -49,7 +49,7 @@ export class CommonPageMethods{
           })
     }
 
-    //------------------- GENERATE USERNAME AND PASSWORD RANDOMLY----------------------
+    //-------------------GENERATE USERNAME AND PASSWORD RANDOMLY----------------------
     static generateRandomString(length = 10) {
         let result = "";
         const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
@@ -62,7 +62,17 @@ export class CommonPageMethods{
         return result;
     }
 
+    //---------VERIFY IF USER IS LOGIN------------
     static verifySignedUser(username){
         CommonPageElements.singedUser.should('have.text', `Welcome ${username}`);
+    }
+
+    //---------METHOD TO LOGOUT---------------
+    static logout(){
+        cy.get('body').then($body=>{
+            if($body.find('#logout2').length>0){
+                CommonPageElements.topMenu.logout.click();
+            }
+        })
     }
 }

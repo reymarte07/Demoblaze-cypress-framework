@@ -15,7 +15,6 @@ const product = 'ASUS Full HD'
 
 describe (CommonData.testSuites.catalogoYCompras, ()=>{
     it('Navegación por categorías', ()=>{
-
         Logger.stepNumber(1)
         Logger.step('Iniciar sesión como usuario registrado.')
         Logger.subStep('Navegate to Demoblaze application')
