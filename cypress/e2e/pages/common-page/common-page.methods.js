@@ -7,6 +7,7 @@ export class CommonPageMethods{
         cy.clearAllCookies();
         cy.clearLocalStorage();
         cy.visit(CommonData.url);
+        
     }
 
     //------------CLICK ON HOME MENU------------------------------------
@@ -70,7 +71,7 @@ export class CommonPageMethods{
     //---------METHOD TO LOGOUT---------------
     static logout(){
         cy.get('body').then($body=>{
-            if($body.find('#logout2').length>0){
+            if($body.find('#logout2[style="display: block;"]').length>0){
                 CommonPageElements.topMenu.logout.click();
             }
         })
