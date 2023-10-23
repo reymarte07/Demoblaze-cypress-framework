@@ -1,14 +1,14 @@
-import { Logger } from "../../util/logger";
-import { CartMethods } from "../cart/cart.methods";
-import { CommonData } from "../common-page/commoN-page.data";
-import { CommonPageMethods } from "../common-page/common-page.methods";
-import { homeMethods } from "../home/home.methods";
-import { LoginData } from "../login/login.data";
-import { LoginMethods } from "../login/login.methods";
-import { PlaceOrderData } from "../place-order/place-order.data";
-import { PlaceOrderMethods } from "../place-order/place-order.methods";
-import { ProductDetailsMethods } from "../product-details/product-details.methods";
-import { thankYouForYouPurchaseMethods } from "../thank-you-for-you-purchase/thank-you-for-you-purchase.methods";
+import { Logger } from "../util/logger";
+import { LoginData } from "../pages/login/login.data";
+import { CartMethods } from "../pages/cart/cart.methods";
+import { CommonData } from "../pages/common-page/commoN-page.data";
+import { CommonPageMethods } from "../pages/common-page/common-page.methods";
+import { LoginMethods } from "../pages/login/login.methods";
+import { homeMethods } from "../pages/home/home.methods";
+import { ProductDetailsMethods } from "../pages/product-details/product-details.methods";
+import { PlaceOrderMethods } from "../pages/place-order/place-order.methods";
+import { PlaceOrderData } from "../pages/place-order/place-order.data";
+import { thankYouForYouPurchaseMethods } from "../pages/thank-you-for-you-purchase/thank-you-for-you-purchase.methods";
 
 const user = LoginData.validCredentials
 const product = 'ASUS Full HD'
@@ -18,7 +18,7 @@ describe (CommonData.testSuites.catalogoYCompras, ()=>{
         Logger.stepNumber(1)
         Logger.step('Iniciar sesión como usuario registrado.')
         Logger.subStep('Navegate to Demoblaze application')
-        CommonPageMethods.navigateToDemoBlaze();
+        CommonPageMethods.navigateToDemoBlaze()
         Logger.subStep('Click on "Log in" link')
         CommonPageMethods.clickOnLoginOption();
         LoginMethods.login(user.username, user.password)
@@ -30,7 +30,7 @@ describe (CommonData.testSuites.catalogoYCompras, ()=>{
 
         Logger.stepNumber(3)
         Logger.step('Seleccionar una categoría de productos en el menú de navegación.')
-        homeMethods.clickOnMonitorsOption();
+        homeMethods.clickOnMonitorsOption()
         Logger.verification('Verificar que se muestra la lista de productos correspondiente a la categoría seleccionada.')
         homeMethods.verifyProductDisplayed('Apple monitor 24')
         homeMethods.verifyProductDisplayed('ASUS Full HD')
@@ -91,6 +91,7 @@ describe (CommonData.testSuites.catalogoYCompras, ()=>{
         Logger.subStep('Click on "Log in" link')
         CommonPageMethods.clickOnLoginOption();
         LoginMethods.login(user.username, user.password)
+        cy.wait(5000)
 
         Logger.stepNumber(2)
         Logger.step('Navegar a la página de inicio.')
@@ -143,8 +144,9 @@ describe (CommonData.testSuites.catalogoYCompras, ()=>{
         Logger.stepNumber(13)
         Logger.step('Verificar que se muestra un mensaje de confirmación y se redirige al usuario a la página de inicio.')
         thankYouForYouPurchaseMethods.verifyGreenCheckMarkIsDisplayed();
-        cy.wait(5000)
+        cy.wait(3000);
         thankYouForYouPurchaseMethods.clickOnOKButton();
+        cy.wait(3000);
         homeMethods.verifyHomePageIsShown();
 
         Logger.postCondition('Log out')
