@@ -1,5 +1,5 @@
 
-import { CommonData } from "./commoN-page.data";
+import { CommonData } from "./common-page.data";
 import { CommonPageElements } from "./common-page.data.elements";
 
 export class CommonPageMethods{
