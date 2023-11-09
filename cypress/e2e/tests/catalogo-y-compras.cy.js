@@ -108,6 +108,7 @@ describe (CommonData.testSuites.catalogoYCompras, ()=>{
 
         Logger.stepNumber(5)
         Logger.verification('Verificar que se muestra la página de detalles del producto.')
+        cy.wait(5000)
         ProductDetailsMethods.verifyProductDetailsPageDisplayed();
         
 
