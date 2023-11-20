@@ -14,4 +14,4 @@ phases:
     commands:
       - aws s3 sync allure-report s3://reporte-pruebas/
       - aws s3 cp --recursive --acl public-read s3://reporte-pruebas/ s3://reporte-pruebas/ --metadata-directive REPLACE
-      
+      - echo "The HTML report can be found here <https://reporte-pruebas.s3.us-east-2.amazonaws.com/index.html>"
