@@ -8,7 +8,7 @@ describe(CommonData.testSuites.autenticacion, () => {
   it("Inicio de sesión válido", () => {
     Logger.stepNumber(1);
     Logger.step("Navegar a la página de inicio.");
-    CommonPageMethods.navigateToDemoBlaze();
+    
 
     Logger.stepNumber(2);
     Logger.step('Hacer clic en "Log in" en la barra de navegación.');
